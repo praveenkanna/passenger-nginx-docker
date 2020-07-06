@@ -17,3 +17,5 @@ Then you will be able to launch it:
 python ./app.py
 ```
 By default, the app listens on port *5000*.
+
+This application can also be served by Passenger + Nginx using WSGI without any change in the code.
