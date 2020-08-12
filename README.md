@@ -8,14 +8,16 @@ This hello-world app has 2 endpoints:
 # Installation
 
 This application is a Python app. It runs smoothly in Python 3.5 and Python 2.7.
-To run it, you will need to install its dependencies first:
-```
-pip install -r ./requirements.txt
-```
-Then you will be able to launch it:
-```
-python ./app.py
-```
-By default, the app listens on port *5000*.
 
-This application can also be served by Passenger + Nginx using WSGI without any change in the code.
+Clone the repo to a folder:
+- `mkdir $HOME/passenger-app`
+- `cd $HOME/passenger-app`
+- `git clone git@github.com:praveenkanna/passenger-nginx-docker.git .`
+
+To run it, build the image frst:
+
+- `docker build -t <some-name> . `
+
+To run it:
+
+- `docker run -d -p 80:80 <some-name>`
