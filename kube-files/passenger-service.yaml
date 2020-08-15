@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: first-deployment
+  name: test
+spec:
+  ports:
+  - name: test
+    port: 3000
+    protocol: TCP
+    targetPort: 80
+  selector:
+    app: first-deployment
+  externalIPs:
+  - 192.168.1.126
+  type: LoadBalancer
+status:
+  loadBalancer: {}
