@@ -1,24 +1,49 @@
+# apiVersion: apps/v1
+# kind: Deployment
+# metadata:
+#   creationTimestamp: null
+#   labels:
+#     app: first-deployment
+#   name: first-deployment
+# spec:
+#   replicas: 3
+#   selector:
+#     matchLabels:
+#       app: first-deployment
+#   strategy: {}
+#   template:
+#     metadata:
+#       creationTimestamp: null
+#       labels:
+#         app: first-deployment
+#     spec:
+#       containers:
+#       - image: gcr.io/prefab-list-286120/simple-web-app:v1
+#         name: passenger-nginx
+#         resources: {}
+# status: {}
+
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  creationTimestamp: null
+  name: helloweb
   labels:
-    app: first-deployment
-  name: first-deployment
+    app: hello
 spec:
-  replicas: 1
+  # replicas: 3
   selector:
     matchLabels:
-      app: first-deployment
-  strategy: {}
+      app: hello
+      tier: web
   template:
     metadata:
-      creationTimestamp: null
       labels:
-        app: first-deployment
+        app: hello
+        tier: web
     spec:
       containers:
-      - image: praveen39/passenger-nginx:01
-        name: passenger-nginx
-        resources: {}
-status: {}
+      - name: hello-app
+        image: gcr.io/macro-tributary-286518/simple-web-app:v1
+        ports:
+        - containerPort: 8080

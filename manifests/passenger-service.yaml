@@ -1,15 +1,58 @@
+# apiVersion: v1
+# kind: Service
+# metadata:
+#   labels:
+#     app: first-deployment
+#   name: test
+# spec:
+#   ports:
+#   - name: test
+#     port: 80
+#     protocol: TCP
+#     targetPort: 80
+#   selector:
+#     app: first-deployment
+#   type: NodePort
+  # ports:
+  # - name: test
+  #   port: 3000
+  #   protocol: TCP
+  #   targetPort: 80
+  # selector:
+  #   app: first-deployment
+  # type: ClusterIP
+
+
+
+---
+# apiVersion: v1
+# kind: Service
+# metadata:
+#   name: helloweb-backend
+#   labels:
+#     app: first-deployment
+# spec:
+#   type: NodePort
+#   selector:
+#     app: first-deployment
+#   ports:
+#   - port: 80
+#     targetPort: 80
+
+
+
 apiVersion: v1
 kind: Service
 metadata:
+  name: helloweb-backend
   labels:
-    app: first-deployment
-  name: test
+    app: hello
 spec:
-  ports:
-  - name: test
-    port: 3000
-    protocol: TCP
-    targetPort: 80
-  selector:
-    app: first-deployment
   type: NodePort
+  selector:
+    app: hello
+    tier: web
+  ports:
+  - port: 80
+    targetPort: 80
+    protocol: TCP

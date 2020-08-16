@@ -1,0 +1,7 @@
+apiVersion: networking.gke.io/v1beta2
+kind: ManagedCertificate
+metadata:
+  name: passenger-app-cert
+spec:
+  domains:
+    - kubedocker.xyz
