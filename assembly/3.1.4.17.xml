@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<assembly xmlns="http://maven.apache.org/ASSEMBLY/2.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/ASSEMBLY/2.0.0 http://maven.apache.org/xsd/assembly-2.0.0.xsd">
+
+    <id>${project.version}</id>
+    <formats>
+        <format>zip</format>
+    </formats>
+    <includeBaseDirectory>false</includeBaseDirectory>
+
+    <fileSets>
+        <!-- Each fileSet defines the output structure-->
+        <fileSet>
+            <directory>${project.basedir}/release-specifics/${project.version}</directory>
+            <outputDirectory>.</outputDirectory>
+            <includes>
+                <include>**/*</include>
+            </includes>
+            <excludes>
+                <exclude>.placeholder</exclude>
+            </excludes>
+        </fileSet>
+        <!-- Each fileSet defines the output structure-->
+        <fileSet>
+            <directory>${project.basedir}/release-specifics/${project.version}</directory>
+            <outputDirectory>.</outputDirectory>
+            <includes>
+                <include>**/*</include>
+            </includes>
+            <excludes>
+                <exclude>.placeholder</exclude>
+            </excludes>
+        </fileSet>
+        <!-- Each fileSet defines the output structure-->
+        <fileSet>
+            <directory>${project.basedir}/release-specifics/${project.version}</directory>
+            <outputDirectory>.</outputDirectory>
+            <includes>
+                <include>**/*</include>
+            </includes>
+            <excludes>
+                <exclude>.placeholder</exclude>
+            </excludes>
+        </fileSet>
+        <!-- Additional fileset define specifically what to include the specific release -->
+        <!-- Each fileSet defines the output structure-->
+        <fileSet>
+            <directory>${project.basedir}/release-specifics/${project.version}</directory>
+            <outputDirectory>.</outputDirectory>
+            <includes>
+                <include>DRRS_PMO_APPROVED/**/*</include>
+            </includes>
+
+        </fileSet>
+        <fileSet>
+            <directory>${project.basedir}/release-specifics/${project.version}</directory>
+            <outputDirectory>.</outputDirectory>
+            <includes>
+                <include>DRRS_PMO_APPROVED/**/*</include>
+            </includes>
+
+        </fileSet>
+        <fileSet>
+            <directory>${project.basedir}/release-specifics/${project.version}</directory>
+            <outputDirectory>.</outputDirectory>
+            <includes>
+                <include>DRRS_PMO_APPROVED/**/*</include>
+            </includes>
+
+        </fileSet>
+        <fileSet>
+            <directory>${project.basedir}/release-specifics/${project.version}</directory>
+            <outputDirectory>.</outputDirectory>
+            <includes>
+                <include>DRRS_PMO_APPROVED/**/*</include>
+            </includes>
+
+        </fileSet>
+    </fileSets>
+</assembly>
